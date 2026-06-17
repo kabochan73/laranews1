@@ -9,6 +9,7 @@ class ArticleController extends Controller
     public function index()
     {
         $articles = Article::latest('published_at')->paginate(10);
-        return view('articles.index', compact('articles'));
+        $popular = Article::orderByDesc('liked_count')->take(5)->get();
+        return view('articles.index', compact('articles', 'popular'));
     }
 }
