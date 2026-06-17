@@ -1,0 +1,45 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: sans-serif; background: #f5f5f5; color: #333; }
+
+header { background: #3ea8ff; padding: 20px 40px; }
+header h1 { color: white; font-size: 1.4rem; }
+
+main { max-width: 800px; margin: 32px auto; padding: 0 16px; }
+
+.article-card {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 16px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+}
+
+.emoji { font-size: 2rem; flex-shrink: 0; }
+.content { flex: 1; }
+
+.title a {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #1a1a1a;
+    text-decoration: none;
+}
+.title a:hover { color: #3ea8ff; }
+
+.meta { margin-top: 8px; font-size: 0.8rem; color: #888; display: flex; gap: 16px; }
+.liked { color: #e05a5a; }
+
+.pagination { margin-top: 24px; text-align: center; }
+.pagination a, .pagination span {
+    display: inline-block;
+    padding: 6px 12px;
+    margin: 0 2px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    text-decoration: none;
+    color: #3ea8ff;
+    border: 1px solid #ddd;
+}
+.pagination span.current { background: #3ea8ff; color: white; border-color: #3ea8ff; }
