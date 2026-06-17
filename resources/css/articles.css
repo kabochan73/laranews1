@@ -9,6 +9,12 @@ header h1 { color: white; font-size: 1.4rem; }
 main { flex: 1; min-width: 0; }
 aside { width: 280px; flex-shrink: 0; position: sticky; top: 100px; }
 
+@media (max-width: 768px) {
+    header { padding: 16px 20px; }
+    .layout { flex-direction: column; margin: 16px auto; }
+    aside { width: 100%; position: static; }
+}
+
 .sidebar-card { background: white; border-radius: 8px; padding: 20px; box-shadow: 0 1px 4px rgba(0,0,0,0.08); }
 .sidebar-card h2 { font-size: 0.95rem; font-weight: bold; margin-bottom: 16px; padding-bottom: 8px; border-bottom: 2px solid #3ea8ff; }
 
