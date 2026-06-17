@@ -32,7 +32,6 @@
                 <p>記事がありません。<code>php artisan zenn:fetch</code> を実行してください。</p>
             @endforelse
 
-            {{ $articles->links() }}
         </main>
 
         <aside>

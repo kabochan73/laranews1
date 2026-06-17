@@ -19,7 +19,7 @@ class FetchZennArticles extends Command
         $response = Http::get('https://zenn.dev/api/articles', [
             'topicname' => 'laravel',
             'order' => 'latest',
-            'count' => 10,
+            'count' => 30,
         ]);
 
         if ($response->failed()) {
@@ -47,6 +47,14 @@ class FetchZennArticles extends Command
         }
 
         $this->info("{$saved}件の記事を保存しました。");
+
+        $total = Article::count();
+        if ($total > 50) {
+            $deleteCount = $total - 50;
+            Article::oldest('published_at')->take($deleteCount)->delete();
+            $this->info("古い記事を{$deleteCount}件削除しました。");
+        }
+
         return Command::SUCCESS;
     }
 }
