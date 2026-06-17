@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zenn Laravel記事まとめ</title>
-    <link rel="stylesheet" href="/css/articles.css">
+    @vite(['resources/css/app.css'])
 </head>
 <body>
     <header>
